@@ -14,5 +14,13 @@ app.set("layout", "layouts/layout");
 app.get("/", (req, res) => {
   res.render("home");
 });
-
+app.get("/cart", (req, res) => {
+  res.render("cart/index");
+});
+app.get("/register", (req, res) => {
+  res.render("auth/register");
+});
+app.get("/login", (req, res) => {
+  res.render("auth/login");
+});
 app.listen(port, () => console.log(`listen on ${port}`));
