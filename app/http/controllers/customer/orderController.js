@@ -38,6 +38,14 @@ function orderController() {
       res.header("Cache-Control", "no-store"); //fix order navigation message
       res.render("customer/orders", { orders: orders, moment: moment });
     },
+    async show(req, res) {
+      const order = await Order.findById(req.params.id);
+      if (req.user._id.toString() === order.customerId.toString()) {
+        return res.render("customer/singleOrder", { order });
+      } else {
+        return res.redirect("/");
+      }
+    },
   };
 }
 

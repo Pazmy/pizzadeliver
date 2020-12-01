@@ -1,6 +1,5 @@
 import axios from "axios";
 import moment from "moment";
-import { init } from "../../app/models/menu";
 
 function initAdmin() {
   const orderTableBody = document.querySelector("#orderTableBody");
@@ -14,6 +13,9 @@ function initAdmin() {
       },
     })
     .then((res) => {
+      if (typeof res.data === "string") {
+        return;
+      }
       orders = res.data;
       markup = generateMarkup(orders);
       orderTableBody.innerHTML = markup;
