@@ -22,9 +22,14 @@ function orderController() {
       order
         .save()
         .then((result) => {
-          req.flash("success", "Order placed successfully");
-          delete req.session.cart;
-          return res.redirect("/customer/orders");
+          Order.populate(result, { path: "customerId" }, (err, placedOrder) => {
+            req.flash("success", "Order placed successfully");
+            // Emit
+            const eventEmitter = req.app.get("eventEmitter");
+            eventEmitter.emit("orderPlaced", placedOrder);
+            delete req.session.cart;
+            return res.redirect("/customer/orders");
+          });
         })
         .catch((err) => {
           req.flash("error", "Something went wrong");
@@ -40,7 +45,7 @@ function orderController() {
     },
     async show(req, res) {
       const order = await Order.findById(req.params.id);
-      if (req.user._id.toString() === order.customerId.toString()) {
+      if (String(req.user._id) === String(order.customerId)) {
         return res.render("customer/singleOrder", { order });
       } else {
         return res.redirect("/");
