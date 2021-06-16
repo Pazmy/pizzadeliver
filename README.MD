@@ -5,4 +5,4 @@ This is a pizzadelivery app with realtime comunnication.
 
 `npm run build` for build production
 
-createa your own .env in root folder
+create your own .env in root folder
