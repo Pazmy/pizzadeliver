@@ -312,11 +312,11 @@ body {
 }
 
 nav li:last-child a {
-  background-color: #fe5f1e;
+  background-color: #96e072;
 }
 
 nav li:last-child a:hover {
-  background: #b23301;
+  background: #3e8914;
 }
 
 nav li a {
@@ -324,7 +324,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #fe5f1e;
+  color: #96e072;
 }
 
 section.hero {
@@ -336,14 +336,14 @@ section.hero {
 }
 
 .add-to-cart {
-  border: 2px solid #fe5f1e;
-  color: #fe5f1e;
+  border: 2px solid #96e072;
+  color: #96e072;
   transition: all 0.3s ease-in-out;
 }
 
 .add-to-cart:hover {
   color: #fff;
-  background-color: #fe5f1e;
+  background-color: #96e072;
   border-color: #fff;
 }
 
@@ -352,12 +352,12 @@ section.hero {
 }
 
 .btn-primary {
-  background-color: #fe5f1e;
+  background-color: #96e072;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #b23301;
+  background-color: #3e8914;
 }
 
 section.cart {
@@ -365,7 +365,7 @@ section.cart {
 }
 
 section.cart .amount {
-  color: #fe5f1e;
+  color: #96e072;
 }
 
 section.login {
@@ -375,11 +375,11 @@ section.login {
 
 section.login a {
   transition: all 0.3s ease-in-out;
-  color: #fe5f1e;
+  color: #96e072;
 }
 
 section.login a:hover {
-  color: #b23301;
+  color: #3e8914;
 }
 
 .noty_theme_mint {
@@ -388,7 +388,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #fe5f1e;
+  color: #96e072;
 }
 
 section.status {
@@ -485,11 +485,11 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #fe5f1e;
+  color: #96e072;
 }
 
 .status-box ul li.current span:after {
-  background: #fe5f1e;
+  background: #96e072;
 }
 
 .status-box ul li small {
