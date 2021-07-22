@@ -6,3 +6,4 @@ This is a pizzadelivery app with realtime comunnication.
 `npm run build` for build production
 
 create your own .env in root folder
+see user.text for role credentials
